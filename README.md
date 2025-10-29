@@ -20,7 +20,9 @@
 
 2. 准备 Excel 表（N 个）  
    - 按示例格式准备表格（推荐保留表头以便按列名映射）。  
-   - 示例列（可按项目约定）：key, name, groupId, value。  
+   - 示例列（可按项目约定）：key, name, groupId, value。
+   - 注意Excel目录下有个manifest.txt，里面记录的表格文件才是需要程序解析的，不填写不会生成代码之类的，会被过滤掉。
+   - xlsx文件的第一个sheet，list中也同理，记录哪些sheet是需要生成代码的，否则会被过滤掉。
 
 3. 修改生成器配置 config.json（位于 RabiConfigLib 工具目录）  
    - 将 NAME_SPACE_NAME 设置为你的 Mod 命名空间（例如 `Shadowrabbit.Mod.Configs`）。  
@@ -52,3 +54,5 @@
 2. 确保生成的 .txt 数据在运行时能被 ConfigManager.Init 指定的路径找到（通常放在 Assets/ 下）。  
 3. 在 Mod 启动时调用 ConfigManager.Init(...) 与 每个表的 GenerateConfigs() 完成运行时数据生成。  
 4. 如需热重载，可通过 ConfigManager.Clear() + Init() 或再次调用 GenerateConfigs() 完成热刷。
+
+示例工程参考：https://github.com/Shadowrabbit/ExampleProject

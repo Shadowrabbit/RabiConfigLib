@@ -1,6 +1,5 @@
 ```markdown
-# Escape from Duckov — ExampleProject
-
+# Escape from Duckov 配置数据框架
 轻量级 Unity Mod 配置读取示例，演示如何通过 RabiConfigLib 工具链把 Excel 表生成运行时代码与数据（.cs + .txt），并在 Mod 启动时通过强类型 API 访问配置。
 
 核心流程：Excel（多表） → run.exe（RabiConfigLib）→ 生成 .cs 强类型代码 与 .txt 数据 → Mod 引用运行库并两行初始化访问。

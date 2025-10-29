@@ -21,7 +21,7 @@
 
 2. 准备 Excel 表（N 个）  
    - 按示例格式准备表格（推荐保留表头以便按列名映射）。  
-   - 示例列（可按项目约定）：id, name, groupId, value。  
+   - 示例列（可按项目约定）：key, name, groupId, value。  
 
 3. 修改生成器配置 config.json（位于 RabiConfigLib 工具目录）  
    - 将 NAME_SPACE_NAME 设置为你的 Mod 命名空间（例如 `Shadowrabbit.Mod.Configs`）。  

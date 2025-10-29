@@ -42,7 +42,7 @@ namespace RabiConfigLib
             }
             catch (Exception e)
             {
-                Debug.LogError(e);
+                Debug.LogError($"[RabiConfigLib] {e}");
                 throw;
             }
         }
@@ -69,7 +69,7 @@ namespace RabiConfigLib
             }
             catch (Exception e)
             {
-                Debug.LogError(e);
+                Debug.LogError($"[RabiConfigLib] {e}");
                 throw;
             }
         }
@@ -90,7 +90,7 @@ namespace RabiConfigLib
                 }
             }
 
-            throw new Exception($"can't find field name. filedName:{filedName}");
+            throw new Exception($"[RabiConfigLib] Can't find field name. filedName:{filedName}");
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace RabiConfigLib
         {
             if (!_key2RowData.ContainsKey(key))
             {
-                throw new Exception($"fail to remove row data. key:{key}");
+                throw new Exception($"[RabiConfigLib] Failed to remove row data. key:{key}");
             }
 
             _key2RowData.Remove(key);
@@ -151,7 +151,7 @@ namespace RabiConfigLib
 
             if (colTextList.Count <= 1)
             {
-                Debug.LogError($"wrong config data. rowText:{rowText}");
+                Debug.LogError($"[RabiConfigLib] Wrong config data. rowText:{rowText}");
                 return;
             }
 
@@ -161,7 +161,7 @@ namespace RabiConfigLib
                 return;
             }
 
-            Debug.LogError($"repeatedly add row data. key:{key}");
+            Debug.LogError($"[RabiConfigLib] Repeatedly add row data. key:{key}");
         }
     }
 }

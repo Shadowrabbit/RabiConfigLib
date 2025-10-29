@@ -34,7 +34,7 @@ namespace RabiConfigLib
             }
             catch (Exception ex)
             {
-                Debug.LogWarning(ex.ToString());
+                Debug.LogWarning($"[RabiConfigLib] {ex}");
                 return 0;
             }
         }
@@ -57,7 +57,7 @@ namespace RabiConfigLib
             }
             catch (Exception ex)
             {
-                Debug.LogWarning(ex.ToString());
+                Debug.LogWarning($"[RabiConfigLib] {ex}");
                 return 0;
             }
         }
@@ -80,7 +80,7 @@ namespace RabiConfigLib
             }
             catch (Exception ex)
             {
-                Debug.LogWarning(ex.ToString());
+                Debug.LogWarning($"[RabiConfigLib] {ex}");
                 return false;
             }
         }
@@ -113,7 +113,7 @@ namespace RabiConfigLib
                 return new Vector2Int(ToInt(vecStr[0]), ToInt(vecStr[1]));
             }
 
-            Debug.LogError($"Unable to convert to Vector3Int str:{str}");
+            Debug.LogError($"[RabiConfigLib] Unable to convert to Vector2Int str:{str}");
             return Vector2Int.zero;
         }
 
@@ -136,7 +136,7 @@ namespace RabiConfigLib
 
             var vecStr = str.Split('-');
             if (vecStr.Length == 3) return new Vector3Int(ToInt(vecStr[0]), ToInt(vecStr[1]), ToInt(vecStr[2]));
-            Debug.LogError($"Unable to convert to Vector3Int str:{str}");
+            Debug.LogError($"[RabiConfigLib] Unable to convert to Vector3Int str:{str}");
             return Vector3Int.zero;
         }
 
@@ -159,7 +159,7 @@ namespace RabiConfigLib
 
             var vecStr = str.Split('-');
             if (vecStr.Length == 3) return new Vector3(ToFloat(vecStr[0]), ToFloat(vecStr[1]), ToFloat(vecStr[2]));
-            Debug.LogError($"Unable to convert to Vector3 str:{str}");
+            Debug.LogError($"[RabiConfigLib] Unable to convert to Vector3 str:{str}");
             return Vector3.zero;
         }
 
@@ -184,7 +184,7 @@ namespace RabiConfigLib
                 var kvPair = kvPairStr.Split(':');
                 if (kvPair.Length != 2)
                 {
-                    Debug.LogError($"Failed to parse dictionary:{str}");
+                    Debug.LogError($"[RabiConfigLib] Failed to parse dictionary:{str}");
                     continue;
                 }
 

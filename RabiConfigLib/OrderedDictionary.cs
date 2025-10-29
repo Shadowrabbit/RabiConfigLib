@@ -41,7 +41,7 @@ namespace RabiConfigLib
             {
                 if (Keys.Count <= index)
                 {
-                    Debug.LogError($"index out of bounds. index:{index}");
+                    Debug.LogError($"[RabiConfigLib] Index out of bounds. index:{index}");
                     return default;
                 }
 
@@ -61,7 +61,7 @@ namespace RabiConfigLib
         {
             if (_dictionary.ContainsKey(key))
             {
-                throw new ArgumentException("An element with the same key already exists in the OrderedDictionary.");
+                throw new ArgumentException("[RabiConfigLib] An element with the same key already exists in OrderedDictionary.");
             }
 
             Keys.Add(key);
@@ -97,7 +97,7 @@ namespace RabiConfigLib
         }
 
         /// <summary>
-        /// 获取某个key的index
+        /// Get the index of a key
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>

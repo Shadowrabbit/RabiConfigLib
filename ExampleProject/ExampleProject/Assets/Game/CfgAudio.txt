@@ -1,0 +1,5 @@
+UnitOnChain|通用连锁|||1
+UnitOnDie|通用死亡||Assets/AddressableAssets/Sounds/Sfxs/SfxUnitOnDie.ogg|1
+HeroOnHit|通用英雄受击||Assets/AddressableAssets/Sounds/Sfxs/SfxHeroOnHit.ogg|1
+UnitOnHitStar|星星受击||Assets/AddressableAssets/Sounds/Sfxs/SfxUnitOnHit.ogg|1
+UnitOnPlaced|单位放置||Assets/AddressableAssets/Sounds/Sfxs/SfxUnitOnPlaced.ogg|1
